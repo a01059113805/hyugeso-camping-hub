@@ -3,6 +3,7 @@ description: "정육식당, 셀프세차장, 무인카페가 있는 휴게소와
 theme: minima
 lang: ko_KR
 markdown: kramdown
+permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
   - jekyll-sitemap
