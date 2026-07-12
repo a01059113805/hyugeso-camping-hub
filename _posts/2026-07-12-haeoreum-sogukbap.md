@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "포항 기계면 맛집, 해오름휴게소 한우 소국밥 — 얼큰하고 든든한 한 그릇"
-date: 2026-07-13
+date: 2026-07-12
 categories: [매장소식]
 image: /assets/images/hyugeso-sogukbap.png
 ---
