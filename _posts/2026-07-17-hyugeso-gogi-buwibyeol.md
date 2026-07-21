@@ -6,7 +6,7 @@ categories: [캠핑정보]
 image: /assets/images/gogi-buwibyeol.png
 ---
 
-![정육점 진열대에 부위별로 놓인 신선한 한우 고기](/hyugeso-camping-hub/assets/images/gogi-buwibyeol.png)
+![정육점 진열대에 부위별로 놓인 신선한 한우 고기]({{ '/assets/images/gogi-buwibyeol.png' | relative_url }})
 
 **은지**: 이번 주말에 계곡 가는데 고기는 뭐 사 가지? 그냥 눈에 보이는 거 아무거나 사갈까?
 **현우**: 그럼 반은 실패야. 숯불에 바로 구울 건지, 국물 요리 백업으로 챙길 건지에 따라 골라야 할 부위가 달라.
@@ -29,4 +29,5 @@ image: /assets/images/gogi-buwibyeol.png
 계곡이나 캠핑장으로 넘어가기 전, 기계면을 지나는 길에 들러 부위별로 눈으로 확인하고 담아가는 것도 방법이다. 포항서숲캠핑장을 이용하는 손님이라면 정육점 상시할인도 받을 수 있으니 캠핑 가는 길에 같이 챙겨보시길.
 
 포항 정육점 직거래로 신선육 고르러 가는 길, 아래에서 기계해오름식당(정육점) 위치 먼저 확인해보세요.
-https://map.naver.com/p/entry/place/1167153821
+
+👉 [네이버 지도에서 기계해오름식당(정육점) 위치 보기](https://map.naver.com/p/entry/place/1167153821){: .cta-button}

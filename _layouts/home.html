@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="home-intro">
+    <h1 class="home-intro-title">{{ site.title }}</h1>
+    <p class="home-intro-tagline">포항 기계면 맛집 정보 · 캠핑장 소식</p>
+  </div>
+
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li{% if post.image %} class="has-thumb"{% endif %}>
+        {%- if post.image -%}
+        <a class="post-thumb" href="{{ post.url | relative_url }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+        </a>
+        {%- endif -%}
+        <div class="post-body">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          {%- if post.categories.size > 0 -%}
+            <span class="post-category">{{ post.categories | first }}</span>
+          {%- endif -%}
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>

@@ -6,7 +6,7 @@ categories: [매장소식]
 image: /assets/images/hyugeso-sogukbap.png
 ---
 
-![한우 소국밥](/hyugeso-camping-hub/assets/images/hyugeso-sogukbap.png)
+![한우 소국밥]({{ '/assets/images/hyugeso-sogukbap.png' | relative_url }})
 
 포항 외곽 대로변, 계곡(청송·하옥·죽장) 방면으로 가는 길목에 자리한 **해오름휴게소** 안 기계해오름식당의 대표 메뉴를 소개합니다.
 
@@ -29,4 +29,4 @@ image: /assets/images/hyugeso-sogukbap.png
 
 계곡 여행이나 캠핑 가시는 길, 해오름휴게소에 들러 든든하게 챙겨 가세요.
 
-👉 [네이버에서 기계해오름식당 자세히 보기](https://search.naver.com/search.naver?query=기계해오름식당)
+👉 [네이버에서 기계해오름식당 자세히 보기](https://search.naver.com/search.naver?query=기계해오름식당){: .cta-button}
