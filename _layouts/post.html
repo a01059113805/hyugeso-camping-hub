@@ -22,6 +22,21 @@ layout: default
     {{ content }}
   </div>
 
+  {%- comment -%}
+    business 태그가 있는 글엔 소개(기둥) 페이지로 브랜드 앵커 내부링크를 자동으로 붙인다.
+    기둥페이지가 내부링크 신호를 받게 해 상호 검색 랭킹을 강화한다(2026-07-24 추가).
+  {%- endcomment -%}
+  {%- if page.business -%}
+    {%- if page.business == "hyugeso" -%}
+      {%- assign biz_url = "/about-hyugeso/" -%}{%- assign biz_label = "해오름휴게소(기계해오름식당) 안내 보기" -%}
+    {%- elsif page.business == "camping" -%}
+      {%- assign biz_url = "/about-camping/" -%}{%- assign biz_label = "포항서숲캠핑장 안내 보기" -%}
+    {%- endif -%}
+    {%- if biz_url -%}
+  <p class="post-store-link">📍 <a href="{{ biz_url | relative_url }}">{{ biz_label }}</a></p>
+    {%- endif -%}
+  {%- endif -%}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
