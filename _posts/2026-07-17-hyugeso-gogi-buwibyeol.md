@@ -4,6 +4,7 @@ title: "포항 정육점 한우 직거래, 캠핑·계곡 갈 때 고기 부위�
 date: 2026-07-17
 categories: [캠핑정보]
 image: /assets/images/gogi-buwibyeol.png
+business: hyugeso
 ---
 
 ![정육점 진열대에 부위별로 놓인 신선한 한우 고기]({{ '/assets/images/gogi-buwibyeol.png' | relative_url }})

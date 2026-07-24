@@ -175,6 +175,82 @@ $grey-color:       $color-neutral;
   }
 }
 
+// --- 핵심요약 블록 (post-summary / TL;DR) ---
+.post-summary {
+  margin: 0 0 28px;
+  padding: 16px 20px;
+  background-color: rgba($color-primary, 0.06);
+  border: 1px solid rgba($color-primary, 0.22);
+  border-left: 4px solid $color-primary;
+  border-radius: 10px;
+
+  p {
+    margin: 0 0 8px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  li {
+    margin: 3px 0;
+    line-height: 1.5;
+  }
+}
+
+// --- 정보 기준일 각주 (post-note) ---
+.post-note {
+  margin-top: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba($color-neutral, 0.35);
+  font-size: 13px;
+  color: $grey-color;
+}
+
+// --- 자동 목차 (post-toc) ---
+.post-toc {
+  margin: 0 0 28px;
+  padding: 16px 20px;
+  background-color: rgba($color-secondary, 0.08);
+  border: 1px solid rgba($color-secondary, 0.25);
+  border-radius: 10px;
+
+  .post-toc-title {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: darken($color-secondary, 12%);
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  li {
+    margin: 3px 0;
+    line-height: 1.5;
+  }
+
+  a {
+    color: $color-text;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+}
+
+// 앵커 점프 시 소제목이 화면 최상단에 딱 붙지 않도록 여백
+.post-content h2,
+.post-content h3 {
+  scroll-margin-top: 16px;
+}
+
 // --- 헤더 내비게이션: 버튼형 ---
 .site-nav .page-link {
   padding: 6px 14px;

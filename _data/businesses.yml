@@ -1,0 +1,37 @@
+# 업체별 구조화 데이터 — LocalBusiness JSON-LD 스키마의 원천.
+# 글 front matter에 `business: hyugeso` 또는 `business: camping` 을 넣으면
+# _includes/schema.html 이 해당 업체의 LocalBusiness 스키마를 자동 생성한다.
+# NAP(상호·주소·전화)가 검색/AI 신뢰신호이므로 네이버플레이스·구글비즈니스와 반드시 일치시킬 것.
+
+hyugeso:
+  type: Restaurant
+  name: "기계해오름식당"
+  description: "청송·하옥·죽장 계곡 길목의 한우 정육식당. 무제한 샐러드바, 상차림비 없음."
+  telephone: "+82-54-241-3969"   # 자체자료 기준. 다이닝코드의 0507 번호는 안심(가상)번호로 추정 — 사장님 확인 필요
+  priceRange: "₩₩"
+  servesCuisine: ["한우", "한식"]
+  streetAddress: "기계로57번길 21"
+  addressLocality: "포항시 북구 기계면"
+  addressRegion: "경상북도"
+  addressCountry: "KR"
+  openingHours:
+    - "Mo-Su 11:00-14:30"
+    - "Mo-Su 16:30-21:30"
+  sameAs:
+    - "https://map.naver.com/p/entry/place/1167153821"   # 정육점/마트 네이버플레이스 (식당 전용 place URL 확보되면 교체·추가)
+
+camping:
+  type: Campground
+  name: "포항서숲캠핑장"
+  description: "포항 기계면, 계곡 길목의 오토캠핑장. 수영장·트램펄린·편백 산책로, 42사이트."
+  telephone: "+82-70-4270-3296"
+  priceRange: "₩₩"
+  streetAddress: "기계로212번길 34"
+  addressLocality: "포항시 북구 기계면"
+  addressRegion: "경상북도"
+  addressCountry: "KR"
+  url: "http://pscamp.hana-pnc.co.kr"
+  checkinTime: "13:00"
+  checkoutTime: "12:00"
+  sameAs:
+    - "https://map.naver.com/p/entry/place/1201059282"   # 캠핑장 네이버플레이스

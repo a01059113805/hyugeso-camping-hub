@@ -1,0 +1,64 @@
+{%- comment -%}
+  서버렌더 JSON-LD 스키마. BlogPosting/WebSite 는 jekyll-seo-tag 가 이미 head에 넣으므로
+  여기서는 그것이 다루지 않는 두 가지만 추가한다:
+    1) FAQPage — 글 front matter 에 `faq:` (q/a 리스트)가 있을 때. AI 인용 근거가 가장 확실한 스키마.
+    2) LocalBusiness(+서브타입) — 글 front matter 에 `business: hyugeso|camping` 이 있을 때.
+  스키마는 완전하게 채운다(반쯤 채운 스키마는 신뢰도 페널티).
+{%- endcomment -%}
+{%- if page.faq -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for qa in page.faq -%}
+    {
+      "@type": "Question",
+      "name": {{ qa.q | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ qa.a | jsonify }} }
+    }{%- unless forloop.last %},{% endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+{%- if page.business and site.data.businesses[page.business] -%}
+{%- assign biz = site.data.businesses[page.business] -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": {{ biz.type | jsonify }},
+  "name": {{ biz.name | jsonify }},
+  {%- if biz.description %}
+  "description": {{ biz.description | jsonify }},
+  {%- endif %}
+  "telephone": {{ biz.telephone | jsonify }},
+  {%- if biz.priceRange %}
+  "priceRange": {{ biz.priceRange | jsonify }},
+  {%- endif %}
+  {%- if biz.servesCuisine %}
+  "servesCuisine": {{ biz.servesCuisine | jsonify }},
+  {%- endif %}
+  {%- if biz.url %}
+  "url": {{ biz.url | jsonify }},
+  {%- endif %}
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ biz.streetAddress | jsonify }},
+    "addressLocality": {{ biz.addressLocality | jsonify }},
+    "addressRegion": {{ biz.addressRegion | jsonify }},
+    "addressCountry": {{ biz.addressCountry | jsonify }}
+  },
+  {%- if biz.openingHours %}
+  "openingHours": {{ biz.openingHours | jsonify }},
+  {%- endif %}
+  {%- if biz.checkinTime %}
+  "checkinTime": {{ biz.checkinTime | jsonify }},
+  {%- endif %}
+  {%- if biz.checkoutTime %}
+  "checkoutTime": {{ biz.checkoutTime | jsonify }},
+  {%- endif %}
+  "sameAs": {{ biz.sameAs | jsonify }}
+}
+</script>
+{%- endif -%}
