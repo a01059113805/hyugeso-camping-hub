@@ -29,6 +29,9 @@
   "@context": "https://schema.org",
   "@type": {{ biz.type | jsonify }},
   "name": {{ biz.name | jsonify }},
+  {%- if biz.alternateName %}
+  "alternateName": {{ biz.alternateName | jsonify }},
+  {%- endif %}
   {%- if biz.description %}
   "description": {{ biz.description | jsonify }},
   {%- endif %}

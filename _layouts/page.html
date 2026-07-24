@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{%- comment -%}
+  minima 기본 page 레이아웃을 그대로 두되, LocalBusiness/FAQ 스키마를 함께 내보내도록 확장한다.
+  (기본 minima page.html 은 schema.html 을 include 하지 않아 소개 페이지에 업체 스키마가 빠졌었음 — 2026-07-24 수정)
+{%- endcomment -%}
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
+{%- include schema.html -%}
