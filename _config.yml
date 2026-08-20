@@ -5,6 +5,7 @@ author: "해오름휴게소·포항서숲캠핑장"
 description: "정육식당, 셀프세차장, 무인카페가 있는 휴게소와 오토캠핑장 소식 및 정보 모음"
 theme: minima
 lang: ko_KR
+timezone: Asia/Seoul
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 plugins:
